@@ -39,8 +39,8 @@ $(document).ready(function() {
                         );
 
                         transaction.feePayer = window.solana.publicKey;
-                        let blockhashObj = await connection.getRecentBlockhash();
-                        transaction.recentBlockhash = blockhashObj.blockhash;
+                        let blockhashObj = await connection.getLatestBlockhash();
+                        transaction.latestBlockhash = blockhashObj.blockhash;
 
                         const signed = await window.solana.signTransaction(transaction);
                         console.log("Transaction signed:", signed);
